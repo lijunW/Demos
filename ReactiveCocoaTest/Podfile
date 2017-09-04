@@ -1,0 +1,18 @@
+# Uncomment the next line to define a global platform for your project
+platform :ios, ‘8.0’
+
+target 'ReactiveCocoaTest' do
+  # Comment the next line if you're not using Swift and don't want to use dynamic frameworks
+  use_frameworks!
+pod 'SnapKit', '~> 3.2.0'
+pod 'Alamofire', '~> 4.4'
+pod 'Kingfisher', '~> 3.10.3'
+pod 'Hero', '~> 1.0.0-alpha.1'
+pod 'Spring', :git => 'https://github.com/MengTo/Spring.git', :branch => 'swift3'
+pod 'SwiftyJSON'
+pod 'ObjectMapper', '~> 2.2'
+#pod 'RealmMapper', '~> 2.3.0'
+pod 'AlamofireObjectMapper', '~> 4.0'
+pod 'MJRefresh', '~> 3.1.12'
+pod 'IGListKit', '~> 3.0'
+end

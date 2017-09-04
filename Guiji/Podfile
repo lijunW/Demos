@@ -1,0 +1,13 @@
+# Uncomment the next line to define a global platform for your project
+# platform :ios, '9.0'
+
+target 'Guiji' do
+  # Comment the next line if you're not using Swift and don't want to use dynamic frameworks
+  use_frameworks!
+pod 'MJRefresh', '~> 3.1.12'
+  # Pods for Guiji
+pod 'AMapLocation-NO-IDFA'#定位SDK
+pod 'AMapNavi-NO-IDFA' #导航SDK（已包含3D地图，无需单独引入3D地图）
+pod 'AMapSearch-NO-IDFA' #搜索功能
+pod 'Realm', '2.8.1'
+end
