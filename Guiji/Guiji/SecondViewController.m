@@ -10,6 +10,7 @@
 #import <MAMapKit/MAMapKit.h>
 #import "LocalShareModel.h"
 #import <Realm/Realm.h>
+#import "WSDatePickerView.h"
 @interface SecondViewController ()
 {
      CLLocationCoordinate2D coords1[10000];
@@ -19,6 +20,17 @@
 @end
 
 @implementation SecondViewController
+- (IBAction)pickDate:(UIBarButtonItem *)sender {
+    WSDatePickerView *datepicker = [[WSDatePickerView alloc] initWithDateStyle:DateStyleShowYearMonthDay CompleteBlock:^(NSDate *selectDate) {
+        NSString * dateFormatter = @"yyyy-MM-dd";
+        NSString *date = [selectDate stringWithFormat:dateFormatter];
+        NSLog(@"选择的日期：%@",date);
+    }];
+    //datepicker.dateLabelColor = Theme_Main_Color;//年-月-日-时-分 颜色
+    datepicker.datePickerColor = [UIColor blackColor];//滚轮日期颜色
+    //datepicker.doneButtonColor = Theme_Main_Color;//确定按钮的颜色
+    [datepicker show];
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -33,10 +45,6 @@
     
     //add overlay
     MAPolyline *polyline1 = [MAPolyline polylineWithCoordinates:coords1 count:sizeof(coords1) / sizeof(coords1[0])];
-    //    MAPolyline *polyline2 = [MAPolyline polylineWithCoordinates:coords2 count:sizeof(coords2) / sizeof(coords2[0])];
-    //    MAPolyline *polyline3 = [MAPolyline polylineWithCoordinates:coords3 count:sizeof(coords3) / sizeof(coords3[0])];
-    //    [self.mapView addOverlays:@[polyline1, polyline2, polyline3]];
-    
     [self.mapView addOverlay:polyline1];
     
     MAAnimatedAnnotation *anno = [[MAAnimatedAnnotation alloc] init];
@@ -56,36 +64,6 @@
         coords1[index].latitude = model.latitude;
         coords1[index].longitude = model.longitude;
     }
-}
-
-///*!
-// @brief  生成多角星坐标
-// @param coordinates 输出的多角星坐标数组指针。内存需在外申请，方法内不释放，多角星坐标结果输出。
-// @param pointsCount 输出的多角星坐标数组元素个数。
-// @param starCenter  多角星的中心点位置。
-// */
-//- (void)generateStarPoints:(CLLocationCoordinate2D *)coordinates pointsCount:(NSUInteger)pointsCount atCenter:(CLLocationCoordinate2D)starCenter
-//{
-//#define STAR_RADIUS 0.05
-//#define PI 3.1415926
-//    NSUInteger starRaysCount = pointsCount / 2;
-//    for (int i =0; i<starRaysCount; i++)
-//    {
-//        float angle = 2.f*i/starRaysCount*PI;
-//        int index = 2 * i;
-//        coordinates[index].latitude = STAR_RADIUS* sin(angle) + starCenter.latitude;
-//        coordinates[index].longitude = STAR_RADIUS* cos(angle) + starCenter.longitude;
-//        
-//        index++;
-//        angle = angle + (float)1.f/starRaysCount*PI;
-//        coordinates[index].latitude = STAR_RADIUS/2.f* sin(angle) + starCenter.latitude;
-//        coordinates[index].longitude = STAR_RADIUS/2.f* cos(angle) + starCenter.longitude;
-//    }
-//}
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
 - (void)initButton

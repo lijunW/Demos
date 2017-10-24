@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		6E0D0F971F590C2900A3DACB /* BackGroundLocationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E0D0F961F590C2900A3DACB /* BackGroundLocationManager.m */; };
+		6E9041291F60F8580000E755 /* NSDate+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E9041231F60F8580000E755 /* NSDate+Extension.m */; };
+		6E90412A1F60F8580000E755 /* UIView+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E9041251F60F8580000E755 /* UIView+Extension.m */; };
+		6E90412B1F60F8580000E755 /* WSDatePickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E9041271F60F8580000E755 /* WSDatePickerView.m */; };
+		6E90412C1F60F8580000E755 /* WSDatePickerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6E9041281F60F8580000E755 /* WSDatePickerView.xib */; };
 		6EB10A8F1F4EA98C0045B61B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EB10A8E1F4EA98C0045B61B /* main.m */; };
 		6EB10A921F4EA98C0045B61B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EB10A911F4EA98C0045B61B /* AppDelegate.m */; };
 		6EB10A951F4EA98C0045B61B /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EB10A941F4EA98C0045B61B /* FirstViewController.m */; };
@@ -24,6 +28,13 @@
 /* Begin PBXFileReference section */
 		6E0D0F951F590C2900A3DACB /* BackGroundLocationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BackGroundLocationManager.h; sourceTree = "<group>"; };
 		6E0D0F961F590C2900A3DACB /* BackGroundLocationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BackGroundLocationManager.m; sourceTree = "<group>"; };
+		6E9041221F60F8580000E755 /* NSDate+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+Extension.h"; sourceTree = "<group>"; };
+		6E9041231F60F8580000E755 /* NSDate+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+Extension.m"; sourceTree = "<group>"; };
+		6E9041241F60F8580000E755 /* UIView+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Extension.h"; sourceTree = "<group>"; };
+		6E9041251F60F8580000E755 /* UIView+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Extension.m"; sourceTree = "<group>"; };
+		6E9041261F60F8580000E755 /* WSDatePickerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WSDatePickerView.h; sourceTree = "<group>"; };
+		6E9041271F60F8580000E755 /* WSDatePickerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WSDatePickerView.m; sourceTree = "<group>"; };
+		6E9041281F60F8580000E755 /* WSDatePickerView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WSDatePickerView.xib; sourceTree = "<group>"; };
 		6EB10A8A1F4EA98C0045B61B /* Guiji.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Guiji.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6EB10A8E1F4EA98C0045B61B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		6EB10A901F4EA98C0045B61B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -68,9 +79,24 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		6E9041211F60F8580000E755 /* WSDaePickerView */ = {
+			isa = PBXGroup;
+			children = (
+				6E9041221F60F8580000E755 /* NSDate+Extension.h */,
+				6E9041231F60F8580000E755 /* NSDate+Extension.m */,
+				6E9041241F60F8580000E755 /* UIView+Extension.h */,
+				6E9041251F60F8580000E755 /* UIView+Extension.m */,
+				6E9041261F60F8580000E755 /* WSDatePickerView.h */,
+				6E9041271F60F8580000E755 /* WSDatePickerView.m */,
+				6E9041281F60F8580000E755 /* WSDatePickerView.xib */,
+			);
+			path = WSDaePickerView;
+			sourceTree = "<group>";
+		};
 		6EB10A811F4EA98C0045B61B = {
 			isa = PBXGroup;
 			children = (
+				6E9041211F60F8580000E755 /* WSDaePickerView */,
 				6EB10A8C1F4EA98C0045B61B /* Guiji */,
 				6EB10A8B1F4EA98C0045B61B /* Products */,
 				568E799A1C1306FEFC471624 /* Pods */,
@@ -197,6 +223,7 @@
 			files = (
 				6EB10AA01F4EA98D0045B61B /* LaunchScreen.storyboard in Resources */,
 				6EB10A9D1F4EA98D0045B61B /* Assets.xcassets in Resources */,
+				6E90412C1F60F8580000E755 /* WSDatePickerView.xib in Resources */,
 				6EB10A9B1F4EA98D0045B61B /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -268,14 +295,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6E90412A1F60F8580000E755 /* UIView+Extension.m in Sources */,
 				6EB10A981F4EA98D0045B61B /* SecondViewController.m in Sources */,
 				6EB10A921F4EA98C0045B61B /* AppDelegate.m in Sources */,
 				6E0D0F971F590C2900A3DACB /* BackGroundLocationManager.m in Sources */,
 				6EB10A951F4EA98C0045B61B /* FirstViewController.m in Sources */,
 				6EB10A8F1F4EA98C0045B61B /* main.m in Sources */,
+				6E90412B1F60F8580000E755 /* WSDatePickerView.m in Sources */,
 				6EB10AAC1F4ECAB90045B61B /* LocalShareModel.m in Sources */,
 				6EB10AB51F4ED5FC0045B61B /* ThirdViewController.m in Sources */,
 				6EB10AB81F4EDCFF0045B61B /* MapViewController.m in Sources */,
+				6E9041291F60F8580000E755 /* NSDate+Extension.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
